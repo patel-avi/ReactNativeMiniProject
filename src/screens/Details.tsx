@@ -16,14 +16,14 @@ const Details = ({route}: Props) => {
     const navigation = useNavigation<NavigationProp>();
     const {title, important, text, color} = route.params;
   return (
-    <SafeAreaView className={`flex-1 ${color}`}>
+    <SafeAreaView className={`flex-1 items-center ${color}`}>
         <View>
-            <Text>{title}</Text>
-            {important ? <Text>Important</Text> : null}
+            <Text className="mt-10 mb-5 text-2xl font-bold">{title}</Text>
+            {important ? <Text className="text-red-600 font-bold pb-5">Important</Text> : null}
             <Text>{text}</Text>
         </View>
-    <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text>All notes</Text>
+    <TouchableOpacity className="mt-10 p-1 rounded-md bg-gray-800" onPress={() => navigation.goBack()}>
+        <Text className="text-lg text-white">All notes</Text>
     </TouchableOpacity>
     </SafeAreaView>
   )

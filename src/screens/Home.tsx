@@ -12,7 +12,7 @@ export type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home
 const notes = [
     {title: 'Grocery List', important: false, text: '- strawberries \n- banana \n- yogurt \n- almonds', color: 'bg-pink-400'},
     {title: "Doctor's Appointment", important: true, text: 'April 1 at 2:00pm', color: 'bg-green-400'},
-    {title: 'Smoothie Recipe', important: false, text: '1 cup strawberries \n1 cup bananas \n1/2 cup yogurt', color: 'bg-blue-400'}
+    {title: 'Smoothie Recipe', important: false, text: 'Ingredients: \n1 cup strawberries \n1 cup bananas \n1/2 cup yogurt \n\nInstructions: \nblend', color: 'bg-blue-400'}
 ]
 
 const Home = (props: Props) => {
