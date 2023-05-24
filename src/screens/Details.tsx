@@ -14,9 +14,9 @@ export type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Deta
 
 const Details = ({route}: Props) => {
     const navigation = useNavigation<NavigationProp>();
-    const {title, important, text} = route.params;
+    const {title, important, text, color} = route.params;
   return (
-    <SafeAreaView>
+    <SafeAreaView className={`flex-1 ${color}`}>
         <View>
             <Text>{title}</Text>
             {important ? <Text>Important</Text> : null}

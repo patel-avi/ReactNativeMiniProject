@@ -13,7 +13,7 @@ import Details from './src/screens/Details';
 
 export type RootStackParamList = {
   Home: undefined;
-  Details: {title: string; important: boolean; text: string}
+  Details: {title: string; important: boolean; text: string, color: string}
 }
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
