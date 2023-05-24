@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
 import { RootStackParamList } from '../App'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
@@ -11,9 +11,11 @@ export type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home
 const NoteCard = ({title, important, text}: Props) => {
     const navigation = useNavigation<NavigationProp>();
   return (
-    <View>
-      <Text>NoteCard</Text>
-    </View>
+    <SafeAreaView>
+        <Text>{title}</Text>
+        {important ? <Text>Important</Text> : null}
+        <Text>{text}</Text>
+    </SafeAreaView>
   )
 }
 
