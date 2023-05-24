@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
+import { Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { RootStackParamList } from '../App'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
@@ -12,7 +12,11 @@ const NoteCard = ({title, important, text}: Props) => {
     const navigation = useNavigation<NavigationProp>();
   return (
     <SafeAreaView>
-        <TouchableOpacity onPress={() => navigation.navigate('Details')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Details', {
+            title: title,
+            important: important,
+            text: text,
+        })}>
             <Text>{title}</Text>
             {important ? <Text>Important</Text> : null}
             <Text>{text}</Text>
