@@ -9,7 +9,7 @@ export type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home
 
 const Home = (props: Props) => {
   return (
-    <SafeAreaView className="flex flex-row justify-center">
+    <SafeAreaView className="flex flex-row justify-center min-h-screen">
       <Text className="text-customcolor">Hello world</Text>
     </SafeAreaView>
   )
