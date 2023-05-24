@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
-import { RootStackParamList } from '../App'
+import { RootStackParamList } from '../../App'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
 import NoteCard from '../components/NoteCard'
@@ -17,7 +17,7 @@ const notes = [
 
 const Home = (props: Props) => {
   return (
-    <SafeAreaView className="flex flex-row justify-center min-h-screen">
+    <SafeAreaView className="flex-1 items-center justify-center">
       <Text className="text-customcolor">Notes</Text>
       <View>
         {notes.map(note => (

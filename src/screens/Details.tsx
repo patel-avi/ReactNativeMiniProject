@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native'
 import React from 'react'
-import { RootStackParamList } from '../App'
+import { RootStackParamList } from '../../App'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { RouteProp, useNavigation } from '@react-navigation/native'
 
